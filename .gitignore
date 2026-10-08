@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+outputs/
+node_modules/
+*.wav
+*.mp4
