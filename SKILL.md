@@ -10,6 +10,7 @@ description: 用 Remotion 把口播稿做成动画视频（横屏 1920×1080 或
 | 位置 | 内容 |
 |---|---|
 | `scripts/codex_images.mjs`、`split_sheet.py` | Codex 出图：素材拼图切成透明物件；`cover` 条目出带字的封面 |
+| `scripts/codex_cover.mjs` | 封面：用 Codex 的 native-cover-design 技能整张生成（优先） |
 | `scripts/audio/tts_clone.py`、`gen_bgm.py`、`gen_sfx.py`、`mix.py` | 配音、BGM、音效、混音 |
 | `scripts/audio/asr.py`、`analyze_audio.py`、`whisper_model.py` | ASR 回听、音频体检 |
 | `scripts/audio/align.py` | 整段配音 → 每句、每个字的时间（whisper） |

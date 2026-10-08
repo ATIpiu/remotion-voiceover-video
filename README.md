@@ -12,7 +12,7 @@
 | 拟音 / 作曲 | 按画面事件现做音效（MMAudio），每期单独生成 BGM（MiniMax-Music3） |
 | 混音台 | 配音 + 音效 + BGM，人声出现时自动压低 BGM，归一到 -14 LUFS |
 | 质检 | 抽帧拼联系表查叠字出框，ASR 回听确认头尾句子都在，找最响的时刻 |
-| 海报间 | 按平台尺寸出封面，写 B站 / 小红书 / 抖音 / TikTok 标题和文案 |
+| 海报间 | 按平台出封面（整张由 ImageGen 生成，主标题写清主题和结果，陌生人 3 秒能看懂），写 B站 / 小红书 / 抖音 / TikTok 标题和文案 |
 
 ## 安装
 
@@ -26,6 +26,7 @@ git clone https://github.com/ATIpiu/remotion-voiceover-video ~/.claude/skills/re
 
 - Node.js + Remotion（每期工程里 `npm i remotion @remotion/cli`）、ffmpeg
 - [Codex CLI](https://github.com/openai/codex)（生图，`scripts/codex_images.mjs` 会从 Codex 桌面版里找 `codex.exe`）
+- 封面（可选，优先）：Codex 里装一个 `native-cover-design` 技能，`scripts/codex_cover.mjs` 会让它整张生成封面；没装就用 `codex_images.mjs` 的 cover 条目
 - 本地音频模型（作者用 RTX 5090 离线跑，也可以换成云端服务，见 `reference/models.md`）：
   - 配音：Breeze-TTS-2（`BREEZE_REPO`、`BREEZE_MODEL`）
   - 对齐 / 回听：faster-whisper
